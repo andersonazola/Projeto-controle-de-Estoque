@@ -23,19 +23,24 @@ class Invetory:
     def change_product(self, old_product: str, new_product: str):
         for i in self.product:
             if i['product'] == old_product:
-                i['product'] == new_product
+                i['product'] = new_product
                 print("product successfully changed")
                 return
-            print("This product is out of invetory.")
+            
+        print("This product is out of invetory.")
                 
             
         
     def remove_product(self, remove_item):
-        if remove_item in self.product:
-            self.product.remove(remove_item)
-            print("Product remove successfully! ")
-        print("this product is out of stock. ")            
+        for i in self.product:
+            if i['product'] == remove_item:
+                self.product.remove(i)
+                print("Product remove successfully! ")
+                return
+        
+        print("this product is out of invetory ")            
             
+
                           
     
     def list_product(self) -> list:
