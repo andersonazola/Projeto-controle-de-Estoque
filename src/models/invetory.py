@@ -22,7 +22,7 @@ class Invetory:
     # Alterar produto            
     def change_product(self, old_product: str, new_product: str):
         for i in self.product:
-            if i['product'] == old_product:
+            if i['product'] == old_product: 
                 i['product'] = new_product
                 print("product successfully changed")
                 return
