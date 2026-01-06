@@ -47,8 +47,7 @@ class Invetory:
         for item in self.product:
             print(f"\nProduct: {item['product']} - Price: R${item['price']} - Quantity: {item['quantity']}")
     
-#     def stock_report(self):
-#         pass
+
     
     def close_invetory(self, confirm):
         from src.controllers.controller_invetory import user_invetory
